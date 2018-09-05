@@ -4,23 +4,35 @@ import './styles.css';
 
 import {request} from '../utils/axios';
 
-export default class Layout extends Component<any, any> {
+interface IState {
+  page: number;
+  movies: null | object[];
+}
 
-  public sendRequest = () => {
-    request(3)
+export default class Layout extends Component<{}, IState> {
+
+  public state = {
+    page: 1,
+    movies: null
+  }
+
+  public componentDidMount () {
+    this.sendRequest()
+  }
+
+  public sendRequest = async () => {
+    const movies = await request(this.state.page);
+    this.setState({...this.state, movies: movies})
+    // console.log(movies)
   }
 
   public render() {
+    const { movies } = this.state;
     return (
      <div class = 'container'>
       <Header/>
-      <Grid/>
+      <Grid movies={movies}/>
       <Pagination/>  
-
-      <button onClick={this.sendRequest}>request</button>
-
-
-
      </div>
     )
   }
