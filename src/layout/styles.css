@@ -1,0 +1,8 @@
+.container {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(161, 151, 151, 0.74);
+}
