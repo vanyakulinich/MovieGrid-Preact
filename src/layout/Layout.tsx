@@ -22,8 +22,7 @@ export default class Layout extends Component<{}, IState> {
 
   public sendRequest = async () => {
     const movies = await request(this.state.page);
-    this.setState({...this.state, movies: movies})
-    // console.log(movies)
+    this.setState({...this.state, movies: movies}, () => console.log(movies))
   }
 
   public render() {
