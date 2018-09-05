@@ -1,5 +1,5 @@
-# Movie-Grid
+### Movie-Grid
 
-# Preact + TypeScript
+#### Preact + TypeScript
 
-# yarn => yarn dev (app will start on port 4200)
+#### yarn => yarn dev (app will start on port 4200)
