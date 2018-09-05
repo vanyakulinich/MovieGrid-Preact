@@ -19,6 +19,7 @@
   "author": "k1r0s",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.18.0",
     "preact": "~8.2.6",
     "typescript": "~2.5.3"
   },
