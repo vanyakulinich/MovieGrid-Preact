@@ -1,9 +1,24 @@
 import { h } from 'preact';
+import * as React from 'react';
+import ReactPaginate from 'react-paginate';
+import './style.css';
 
-const Pagination = () => (
-  <div>
-    pagination
-  </div>
+type Props = {
+  changePage: (e?: any) => any;
+}
+
+const Pagination: React.SFC = ({changePage}) => (
+  <ReactPaginate
+    pageCount={15}
+    pageRangeDisplayed={3}
+    marginPagesDisplayed={3}
+    containerClassName='pagContainer'
+    pageClassName='number'
+    activeClassPage='active'
+    onPageChange={changePage}
+    previousClassName='number'
+    nextClassName='number'
+  />
 );
 
 export default Pagination;

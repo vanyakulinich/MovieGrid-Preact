@@ -7,7 +7,11 @@ module.exports = {
     filename: 'app.js'
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx']
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    alias: {
+      'react': 'preact-compat',
+      'react-dom': 'preact-compat',
+    }
   },
   devtool: 'source-map',
   module: {

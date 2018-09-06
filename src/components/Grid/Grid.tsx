@@ -6,9 +6,9 @@ type Props = {
 }
 
 const Grid = ({ movies }: Props) => (
-  <div>
+  <div class='grid'>
     {movies && movies.map(movie=>(
-      <img src={​'http://image.tmdb.org/t/p/w200' +movie.poster_path}/>
+      movie.poster_path ? <img src={'http://image.tmdb.org/t/p/w200' +movie.poster_path}/> : null
     ))}
   </div>
 );
