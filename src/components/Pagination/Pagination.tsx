@@ -7,7 +7,7 @@ type Props = {
   changePage: (e?: any) => any;
 }
 
-const Pagination: React.SFC = ({changePage}) => (
+const Pagination: React.SFC<Props> = ({changePage}) => (
   <ReactPaginate
     pageCount={15}
     pageRangeDisplayed={3}
